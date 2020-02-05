@@ -6,7 +6,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      components: redis
+      component: redis
   template:
     metadata:
       labels:
@@ -17,4 +17,3 @@ spec:
           image: redis
           ports:
             - containerPort: 6379
-

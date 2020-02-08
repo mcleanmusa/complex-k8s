@@ -17,3 +17,16 @@ spec:
           image: mcleanmusa/complex-server
           ports:
             - containerPort: 5000
+          env:
+            - name: REDIS_HOST
+              value: redis-cluster-ip-service
+            - name: REDIS_PORT
+              value: 6379
+            - name: DB_USER
+              value: postgres
+            - name: DB_HOST
+              value: postgres-cluster-ip-service
+            - name: DB_PORT
+              value: 5432
+            - name: DB_DATABASE
+              value: postgres

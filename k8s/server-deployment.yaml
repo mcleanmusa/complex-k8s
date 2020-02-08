@@ -21,17 +21,17 @@ spec:
             - name: REDIS_HOST
               value: redis-cluster-ip-service
             - name: REDIS_PORT
-              value: 6379
+              value: '6379'
             - name: DB_USER
               value: postgres
             - name: DB_HOST
               value: postgres-cluster-ip-service
             - name: DB_PORT
-              value: 5432
+              value: '5432'
             - name: DB_DATABASE
               value: postgres
             - name: DB_PASSWORD
-              valueFrom: 
+              valueFrom:
                 secretKeyRef:
                   name: dbpassword
                   key: DB_PASSWORD

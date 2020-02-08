@@ -30,3 +30,8 @@ spec:
               value: 5432
             - name: DB_DATABASE
               value: postgres
+            - name: DB_PASSWORD
+              valueFrom: 
+                secretKeyRef:
+                  name: dbpassword
+                  key: DB_PASSWORD

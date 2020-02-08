@@ -19,6 +19,12 @@ spec:
       containers:
         - name: postgres
           image: postgres
+          env:
+            - name: DB_PASSWORD
+                valueFrom:
+                  secretKeyRef:
+                    name: dbpassword
+                    key: DB_PASSWORD
           ports:
             - containerPort: 5432
           volumeMounts:
